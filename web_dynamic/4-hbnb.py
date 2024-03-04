@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 @app.teardown_appcontext
 def close_db(error):
-    """ Remove the current SQLAlchemy Session """
+    """ Removes the current SQLAlchemy Session """
     storage.close()
 
 
@@ -43,5 +43,5 @@ def hbnb():
 
 
 if __name__ == "__main__":
-    """ Main Function """
+    """ The Main Function """
     app.run(host='0.0.0.0', port=5001)
